@@ -1,0 +1,90 @@
+// middleware params
+// const authCheck = (req ,res , next) =>{
+//     const { name } = req.params;
+//     if(name == "aman"){
+//         next();
+//     }else{
+//         res.json({
+//             message : "request denied"
+//         });
+//     }
+// };
+
+// middleware query
+// const authCheck = (req ,res , next) =>{
+//     const { name } = req.query;
+//     console.log(req.query)
+//     if(name == "aman"){
+//         next();
+//     }else{
+//         res.json({
+//             message : "request denied"
+//         });
+//     }
+// };
+
+// role
+// const roleCheck = (req,res,next) =>{
+//     const { id } = req.params;
+//     if(id =="user"){
+//         res.json({
+//             message :`welcome back ${id} !!`
+//         })
+//     }else if(id =="admin"){
+//         next();
+//     }else{
+//         res.json({
+//             message : `request denied`
+//         })
+//     }
+// };
+
+
+// const products =[
+//     {   
+//         name:"shirt",
+//         color:"red",
+//         price : "200"
+//     },
+//     {
+//         name :"shirt",
+//         color :"blue",
+//         price:"300"
+//     }
+// ]
+
+// const filter = (req, res, next) => {
+//   const { list } = req.query;
+//   console.log(req.query)
+//   if (list && list==="red" || list==="yellow") {
+//     if (list === "red") {
+//       next();
+//     } else {
+//       res.json(products.filter(item=>item.color===req.query.list))
+//     }
+//   } else {
+//     res.json({
+//       message: "false input",
+//     });
+//   }
+// };
+// get method 
+// for params /user/:name
+
+// app.get("/user",authCheck, (req,res,next) =>{
+//     res.json({
+//         "message":"welcome back"
+//     })
+// } );
+// app.get("/role/:id",roleCheck , (req,res,next) =>{
+//     res.json({
+//         message : `welcome back admin `
+//     })
+// })
+
+// app.get("/product", filter, (req, res, next) => {
+//     res.json(products.filter(item=>item.color===req.query.list))
+// });
+
+
+// routes: 
